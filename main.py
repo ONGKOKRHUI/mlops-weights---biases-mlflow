@@ -15,12 +15,12 @@ from src.evaluator import test_model
 def make(config, device):
     # 1. Load the Full Training Data (60,000 images)
     full_train_dataset = MNISTDatabaseDataset(config.db_path, split='train')
-    
+
     # 2. Split it: 50k for Training, 10k for Validation
     # We use a fixed generator seed so the split is the same every time
     train_size = int(0.833 * len(full_train_dataset)) # approx 50,000
     val_size = len(full_train_dataset) - train_size   # approx 10,000
-    
+
     train_dataset, val_dataset = random_split(
         full_train_dataset, 
         [train_size, val_size], 
@@ -46,10 +46,13 @@ def model_pipeline(hyperparameters=None):
     device = get_device()
     set_seed()
 
+    # wandb.run is None if not doing a HP sweep
     if wandb.run is None:
+        # not doing HP sweep, so use default hyperparameters
         wandb.init(project="pytorch-sqlite-ops", config=hyperparameters)
     config = wandb.config
-
+    print(dict(wandb.config))
+    
     # Log Data Artifact
     if os.path.exists(config.db_path):
         data_artifact = wandb.Artifact(name="mnist-sqlite-data", type="dataset")

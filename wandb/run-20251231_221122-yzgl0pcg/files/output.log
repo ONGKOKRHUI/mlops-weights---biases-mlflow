@@ -1,0 +1,36 @@
+{'architecture': 'CNN', 'batch_size': 128, 'classes': 10, 'dataset': 'MNIST', 'db_path': 'data/mnist.db', 'epochs': 3, 'kernels': [16, 64], 'learning_rate': 0.007684662864282399}
+100%|██████████████████████████████████| 3/3 [05:06<00:00, 102.33s/it]
+Epoch 0 | Train Acc: 98.72% | Val Acc: 98.52%
+Epoch 1 | Train Acc: 99.06% | Val Acc: 98.71%
+Epoch 2 | Train Acc: 99.02% | Val Acc: 98.46%
+🧪 Running final evaluation...
+Final Test Metrics: {'test_accuracy': 0.9874, 'test_precision': 0.987520300879398, 'test_recall': 0.9874, 'test_f1': 0.9874020466145649}
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\venv\Lib\site-packages\wandb\sdk\wandb_config.py", line 165, in __getattr__
+    return self.__getitem__(key)
+           ~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\venv\Lib\site-packages\wandb\sdk\wandb_config.py", line 130, in __getitem__
+    return self._items[key]
+           ~~~~~~~~~~~^^^^^
+KeyError: 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\venv\Lib\site-packages\wandb\agents\pyagent.py", line 296, in _run_job
+    self._function()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\sweep.py", line 38, in sweep_train
+    model_pipeline()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\main.py", line 69, in model_pipeline
+    test_model(model, test_loader, config, device)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\src\evaluator.py", line 50, in test_model
+    onnx_path = config.model_path
+                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\venv\Lib\site-packages\wandb\sdk\wandb_config.py", line 167, in __getattr__
+    raise AttributeError(
+        f"{self.__class__!r} object has no attribute {key!r}"
+    ) from ke
+AttributeError: <class 'wandb.sdk.wandb_config.Config'> object has no attribute 'model_path'

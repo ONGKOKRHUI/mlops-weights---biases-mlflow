@@ -26,8 +26,9 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, config, d
             
             # Log raw training loss frequently (for debugging)
             if ((batch_ct + 1) % 25) == 0:
-                wandb.log({"epoch": epoch, "batch_loss": float(loss)}, step=example_ct)
-        
+                #wandb.log({"epoch": epoch, "batch_loss": float(loss)}, step=example_ct)
+                wandb.log({"epoch": epoch, "batch_loss": loss.detach().item()}, step=example_ct)
+
         # --- End of Epoch: Compare Train vs Validation ---
         
         # 1. Validation Metrics

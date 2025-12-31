@@ -1,0 +1,4 @@
+{'architecture': 'CNN', 'batch_size': 64, 'classes': 10, 'dataset': 'MNIST', 'db_path': 'data/mnist.db', 'epochs': 3, 'kernels': [32, 64], 'learning_rate': 0.005642302596005228}
+ 67%|██████████████████████████████████████████████████████████████████████████████████████████████▋                                               | 2/3 [02:35<01:17, 77.87s/it]
+Epoch 0 | Train Acc: 98.42% | Val Acc: 98.08%
+Epoch 1 | Train Acc: 99.13% | Val Acc: 98.72%

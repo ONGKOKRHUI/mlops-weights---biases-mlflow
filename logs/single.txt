@@ -1,0 +1,26 @@
+PS C:\Users\HP\Documents\repos\mlops-weights-&-biases> & "C:/Upython main.py                                                                  
+wandb: Currently logged in as: kokrhui-ong (kokrhui-ong-tng-digital) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.23.1
+wandb: Run data is saved locally in C:\Users\HP\Documents\repos\mlops-weights-&-biases\wandb\run-20251231_222619-f8sw772a
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run twilight-darkness-2
+wandb:  View project at https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-ops
+wandb:  View run at https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-ops/runs/f8sw772a
+{'epochs': 5, 'classes': 10, 'kernels': [16, 32], 'batch_size': 128, 'learning_rate': 0.005, 'dataset': 'MNIST', 'architecture': 'CNN', 'db_path': 'data/mnist.db', 'model_path': 'model/mnist.onnx'}
+  0%|                                           | 0/5 [00:00<?, ?it/s]Epoch 0 | Train Acc: 98.42% | Val Acc: 98.31%
+ 20%|███████                            | 1/5 [01:04<04:18, 64.74s/it]Epoch 1 | Train Acc: 99.11% | Val Acc: 98.53%
+ 40%|██████████████                     | 2/5 [02:15<03:24, 68.20s/it]Epoch 2 | Train Acc: 98.99% | Val Acc: 98.62%
+ 60%|█████████████████████              | 3/5 [03:52<02:42, 81.42s/it]Epoch 3 | Train Acc: 99.24% | Val Acc: 98.68%
+ 80%|████████████████████████████       | 4/5 [05:33<01:29, 89.08s/it]Epoch 4 | Train Acc: 99.38% | Val Acc: 98.76%
+87137265831, 'test_recall': 0.9872, 'test_f1': 0.9871881455217985}
+[torch.onnx] Obtain model graph for `ConvNet([...]` with `torch.export.export(..., strict=False)`...
+[torch.onnx] Obtain model graph for `ConvNet([...]` with `torch.export.export(..., strict=False)`... ✅
+[torch.onnx] Run decomposition...
+[torch.onnx] Run decomposition... ✅
+[torch.onnx] Translate the graph into ONNX...
+[torch.onnx] Translate the graph into ONNX... ✅
+wandb: WARNING A graphql request initiated by the public wandb API timed out (timeout=19 sec). Create a new API with an integer timeout larger than 19, e.g., `api = wandb.Api(timeout=29)` to increase the graphql timeout.
+✅ Model registered to W&B Artifacts
+wandb:
+wandb: 🚀 View run twilight-darkness-2 at:
+wandb: Find logs at: wandb\run-20251231_222619-f8sw772a\logs 

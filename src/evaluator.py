@@ -36,27 +36,51 @@ def evaluate(model, loader, device, split="val"):
     return metrics
 
 def test_model(model, test_loader, config, device):
-    """Final test: logs metrics and registers model artifact."""
     print("🧪 Running final evaluation...")
+
+    # ---- Evaluate ----
     metrics = evaluate(model, test_loader, device, split="test")
-    
-    # Log all metrics at once
     wandb.log(metrics)
-    
+
+    # Move final metrics to summary
+    for k, v in metrics.items():
+        wandb.run.summary[k] = v
+
     print(f"Final Test Metrics: {metrics}")
 
-    # Export to ONNX
+    # ---- Export ONNX (run-unique path) ----
     dummy_input = next(iter(test_loader))[0].to(device)
-    onnx_path = config.model_path
+    onnx_path = f"model/mnist_{wandb.run.id}.onnx"
     torch.onnx.export(model, dummy_input, onnx_path)
-    
-    # --- MODEL REGISTRY ---
-    # Create an Artifact instead of just saving a file
-    model_artifact = wandb.Artifact(
-        name="mnist-cnn-model", 
+
+    # ---- Candidate model artifact ----
+    candidate_artifact = wandb.Artifact(
+        name="mnist-cnn-candidate",
         type="model",
-        description="Trained MNIST CNN model"
+        metadata={
+            "val_accuracy": wandb.run.summary.get("val_accuracy"),
+            "test_accuracy": metrics["test_accuracy"]
+        }
     )
-    model_artifact.add_file(onnx_path)
-    wandb.log_artifact(model_artifact)
-    print("✅ Model registered to W&B Artifacts")
+    candidate_artifact.add_file(onnx_path)
+    wandb.log_artifact(candidate_artifact)
+
+    # ---- Best-model promotion ----
+    current_val = wandb.run.summary.get("val_accuracy", 0)
+    best_so_far = wandb.run.summary.get("best_val_accuracy", 0)
+
+    if current_val > best_so_far:
+        wandb.run.summary["best_val_accuracy"] = current_val
+
+        best_artifact = wandb.Artifact(
+            name="mnist-cnn-best",
+            type="model",
+            description="Best model from sweep"
+        )
+        best_artifact.add_file(onnx_path)
+        wandb.log_artifact(best_artifact)
+
+        print("🏆 New best model logged!")
+
+    else:
+        print("ℹ️ Model not better than current best")

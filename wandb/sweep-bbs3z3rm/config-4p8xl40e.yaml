@@ -1,0 +1,20 @@
+wandb_version: 1
+
+architecture:
+  value: CNN
+batch_size:
+  value: 64
+classes:
+  value: 10
+dataset:
+  value: MNIST
+db_path:
+  value: data/mnist.db
+epochs:
+  value: 3
+kernels:
+  value:
+  - 32
+  - 64
+learning_rate:
+  value: 0.005642302596005228

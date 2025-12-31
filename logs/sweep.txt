@@ -1,0 +1,371 @@
+wandb: Find logs at: wandb\run-20251231_222619-f8sw772a\logs  python .\sweep.py                                                               
+Create sweep with ID: u4ucth27
+Sweep URL: https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-sweeps/sweeps/u4ucth27
+🚀 Starting sweep with ID: u4ucth27
+wandb: Agent Starting Run: 0s03gum9 with config:
+wandb:  architecture: CNN
+wandb:  batch_size: 128
+wandb:  classes: 10
+wandb:  dataset: MNIST
+wandb:  db_path: data/mnist.db
+wandb:  epochs: 3
+wandb:  kernels: [16, 32]
+wandb:  learning_rate: 0.005791899149506367
+wandb:  model_path: model/mnist.onnx
+wandb: Currently logged in as: kokrhui-ong (kokrhui-ong-tng-digital) to
+ https://api.wandb.ai. Use `wandb login --relogin` to force relogin    
+wandb: WARNING Ignoring project 'pytorch-sqlite-sweeps' when running a sweep.
+wandb: Tracking run with wandb version 0.23.1
+wandb: Run data is saved locally in C:\Users\HP\Documents\repos\mlops-weights-&-biases\wandb\run-20251231_230239-0s03gum9
+wandb:  View run at https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-sweeps/runs/0s03gum9
+{'architecture': 'CNN', 'batch_size': 128, 'classes': 10, 'dataset': 'MNIST', 'db_path': 'data/mnist.db', 'epochs': 3, 'kernels': [16, 32], 'learning_rate': 0.005791899149506367, 'model_path': 'model/mnist.onnx'}
+  0%|                                           | 0/3 [00:00<?, ?it/s]Epoch 0 | Train Acc: 98.52% | Val Acc: 98.38%
+ 33%|███████████▋                       | 1/3 [01:18<02:36, 78.28s/it]Epoch 1 | Train Acc: 99.12% | Val Acc: 98.62%
+ 67%|███████████████████████▎           | 2/3 [02:19<01:08, 68.13s/it]Epoch 2 | Train Acc: 99.11% | Val Acc: 98.62%
+100%|███████████████████████████████████| 3/3 [03:33<00:00, 71.32s/it]
+🧪 Running final evaluation...
+Final Test Metrics: {'test_accuracy': 0.9859, 'test_precision': 0.9859431832108888, 'test_recall': 0.9859, 'test_f1': 0.9858848047192601}
+[torch.onnx] Obtain model graph for `ConvNet([...]` with `torch.export.export(..., strict=False)`...
+[torch.onnx] Obtain model graph for `ConvNet([...]` with `torch.export.export(..., strict=False)`... ✅
+[torch.onnx] Run decomposition...
+[torch.onnx] Run decomposition... ✅
+[torch.onnx] Translate the graph into ONNX...
+[torch.onnx] Translate the graph into ONNX... ✅
+🏆 New best model logged!
+wandb: 
+wandb: Run history:
+wandb:      batch_loss █▆▃▃▄▂▃▂▂▃▂▁▄▄▂▃▂▃▁▂▂▁▂▁▂▁▁▂▂▁▂▁▂▃▃▂▂▃▂▁
+wandb:           epoch ▁▁▁▁▁▁▁▁▁▁▁▁▁▅▅▅▅▅▅▅▅▅▅▅▅▅▅█████████████
+wandb:   test_accuracy ▁
+wandb:         test_f1 ▁
+wandb:  test_precision ▁
+wandb:     test_recall ▁
+wandb:  train_accuracy ▁██
+wandb:        train_f1 ▁██
+wandb: train_precision ▁██
+wandb:    train_recall ▁██
+wandb:              +4 ...
+wandb: 
+wandb: Run summary:
+wandb:        batch_loss 0.02017
+wandb: best_val_accuracy 0.98623
+wandb:             epoch 2
+wandb:     test_accuracy 0.9859
+wandb:           test_f1 0.98588
+wandb:    test_precision 0.98594
+wandb:       test_recall 0.9859
+wandb:    train_accuracy 0.9911
+wandb:          train_f1 0.9911
+wandb:   train_precision 0.99112
+wandb:                +5 ...
+wandb:
+wandb:  View run apricot-sweep-1 at: https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-sweeps/runs/0s03gum9
+wandb:  View project at: https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-sweeps
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: .\wandb\run-20251231_230239-0s03gum9\logs
+wandb: Sweep Agent: Waiting for job.
+wandb: Job received.
+wandb: Agent Starting Run: 03achg0r with config:
+wandb:  architecture: CNN
+wandb:  batch_size: 256
+wandb:  classes: 10
+wandb:  dataset: MNIST
+wandb:  db_path: data/mnist.db
+wandb:  epochs: 3
+wandb:  kernels: [16, 64]
+wandb:  learning_rate: 0.007400395975627033
+wandb:  model_path: model/mnist.onnx
+wandb: WARNING Ignoring project 'pytorch-sqlite-sweeps' when running a sweep.
+wandb: Tracking run with wandb version 0.23.1
+wandb: Run data is saved locally in C:\Users\HP\Documents\repos\mlops-weights-&-biases\wandb\run-20251231_230644-03achg0r
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run dazzling-sweep-2
+wandb:  View project at https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-sweeps
+wandb:  View sweep at https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-sweeps/sweeps/u4ucth27
+wandb:  View run at https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-sweeps/runs/03achg0r
+{'architecture': 'CNN', 'batch_size': 256, 'classes': 10, 'dataset': 'MNIST', 'db_path': 'data/mnist.db', 'epochs': 3, 'kernels': [16, 64], 'learning_rate': 0.007400395975627033, 'model_path': 'model/mnist.onnx'}
+  0%|                                                                                                                                                      | 0/3 [00:00<?, ?it/s]Epoch 0 | Train Acc: 98.42% | Val Acc: 98.18%
+ 33%|███████████████████████████████████████████████▎                                                                                              | 1/3 [01:08<02:16, 68.19s/it]Epoch 1 | Train Acc: 98.99% | Val Acc: 98.59%
+ 67%|██████████████████████████████████████████████████████████████████████████████████████████████▋                                               | 2/3 [02:52<01:29, 89.59s/it]Epoch 2 | Train Acc: 99.07% | Val Acc: 98.64%
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [04:27<00:00, 89.32s/it]
+🧪 Running final evaluation...
+Final Test Metrics: {'test_accuracy': 0.9866, 'test_precision': 0.9867195801193366, 'test_recall': 0.9866, 'test_f1': 0.9866002557012009}
+[torch.onnx] Obtain model graph for `ConvNet([...]` with `torch.export.export(..., strict=False)`...
+[torch.onnx] Obtain model graph for `ConvNet([...]` with `torch.export.export(..., strict=False)`... ✅
+[torch.onnx] Run decomposition...
+[torch.onnx] Run decomposition... ✅
+[torch.onnx] Translate the graph into ONNX...
+[torch.onnx] Translate the graph into ONNX... ✅
+wandb: WARNING A graphql request initiated by the public wandb API timed out (timeout=19 sec). Create a new API with an integer timeout larger than 19, e.g., `api = wandb.Api(timeout=29)` to increase the graphql timeout.
+🏆 New best model logged!
+wandb:
+wandb: Run history:
+wandb:      batch_loss █▃▃▃▃▂▂▂▂▁▁▁▂▁▂▂▁▁▁▁▁▁▁
+wandb:           epoch ▁▁▁▁▁▁▁▁▅▅▅▅▅▅▅▅▅█████████
+wandb:   test_accuracy ▁
+wandb:         test_f1 ▁
+wandb:  test_precision ▁
+wandb:     test_recall ▁
+wandb:  train_accuracy ▁▇█
+wandb:        train_f1 ▁▇█
+wandb: train_precision ▁▇█
+wandb:    train_recall ▁▇█
+wandb:              +4 ...
+wandb:
+wandb: Run summary:
+wandb:        batch_loss 0.02872
+wandb: best_val_accuracy 0.98643
+wandb:             epoch 2
+wandb:     test_accuracy 0.9866
+wandb:           test_f1 0.9866
+wandb:    test_precision 0.98672
+wandb:       test_recall 0.9866
+wandb:    train_accuracy 0.99068
+wandb:          train_f1 0.99068
+wandb:  architecture: CNN
+wandb:  architecture: CNN
+wandb:  batch_size: 64
+wandb:  classes: 10
+wandb:  dataset: MNIST
+wandb:  db_path: data/mnist.db
+wandb:  epochs: 3
+wandb:  kernels: [16, 32]
+wandb:  learning_rate: 0.00019816649243378735
+wandb:  architecture: CNN
+wandb:  batch_size: 64
+wandb:  classes: 10
+wandb:  dataset: MNIST
+wandb:  db_path: data/mnist.db
+wandb:  epochs: 3
+wandb:  kernels: [16, 32]
+wandb:  architecture: CNN
+wandb:  batch_size: 64
+wandb:  classes: 10
+wandb:  dataset: MNIST
+wandb:  db_path: data/mnist.db
+wandb:  epochs: 3
+wandb:  architecture: CNN
+wandb:  batch_size: 64
+wandb:  classes: 10
+wandb:  dataset: MNIST
+wandb:  db_path: data/mnist.db
+wandb:  architecture: CNN
+wandb:  batch_size: 64
+wandb:  classes: 10
+wandb:  dataset: MNIST
+wandb:  architecture: CNN
+wandb:  batch_size: 64
+wandb:  classes: 10
+wandb:  dataset: MNIST
+wandb:  architecture: CNN
+wandb:  batch_size: 64
+wandb:  classes: 10
+wandb:  dataset: MNIST
+wandb:  db_path: data/mnist.db
+wandb:  architecture: CNN
+wandb:  batch_size: 64
+wandb:  classes: 10
+wandb:  dataset: MNIST
+wandb:  db_path: data/mnist.db
+wandb:  batch_size: 64
+wandb:  classes: 10
+wandb:  dataset: MNIST
+wandb:  db_path: data/mnist.db
+wandb:  classes: 10
+wandb:  dataset: MNIST
+wandb:  db_path: data/mnist.db
+wandb:  epochs: 3
+wandb:  kernels: [16, 32]
+wandb:  db_path: data/mnist.db
+wandb:  epochs: 3
+wandb:  kernels: [16, 32]
+wandb:  learning_rate: 0.00019816649243378735
+wandb:  epochs: 3
+wandb:  kernels: [16, 32]
+wandb:  learning_rate: 0.00019816649243378735
+wandb:  kernels: [16, 32]
+wandb:  learning_rate: 0.00019816649243378735
+wandb:  learning_rate: 0.00019816649243378735
+wandb:  model_path: model/mnist.onnx
+wandb: WARNING Ignoring project 'pytorch-sqlite-sweeps' when running a sweep.
+wandb: Tracking run with wandb version 0.23.1
+wandb: Run data is saved locally in C:\Users\HP\Documents\repos\mlops-weights-&-biases\wandb\run-20251231_231204-jkcp7gr5
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run serene-sweep-3
+wandb:  View project at https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-sweeps
+wandb:  View sweep at https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-sweeps/sweeps/u4ucth27
+wandb:  View run at https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-sweeps/runs/jkcp7gr5
+{'architecture': 'CNN', 'batch_size': 64, 'classes': 10, 'dataset': 'MNIST', 'db_path': 'data/mnist.db', 'epochs': 3, 'kernels': [16, 32], 'learning_rate': 0.00019816649243378735, 'model_path': 'model/mnist.onnx'}
+  0%|                                                                                                                                                      | 0/3 [00:00<?, ?it/s]Epoch 0 | Train Acc: 94.02% | Val Acc: 94.07%
+ 33%|███████████████████████████████████████████████                                                                                              | 1/3 [01:42<03:24, 102.15s/it]Epoch 1 | Train Acc: 96.60% | Val Acc: 96.60%
+ 67%|██████████████████████████████████████████████████████████████████████████████████████████████▋                                               | 2/3 [03:10<01:33, 93.92s/it]Epoch 2 | Train Acc: 97.45% | Val Acc: 97.56%
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [04:10<00:00, 83.61s/it]
+🧪 Running final evaluation...
+Final Test Metrics: {'test_accuracy': 0.9759, 'test_precision': 0.9760264134970492, 'test_recall': 0.9759, 'test_f1': 0.9758990487124527}
+[torch.onnx] Obtain model graph for `ConvNet([...]` with `torch.export.export(..., strict=False)`...
+[torch.onnx] Obtain model graph for `ConvNet([...]` with `torch.export.export(..., strict=False)`... ✅
+[torch.onnx] Run decomposition...
+[torch.onnx] Run decomposition... ✅
+[torch.onnx] Translate the graph into ONNX...
+[torch.onnx] Translate the graph into ONNX... ✅
+wandb: WARNING A graphql request initiated by the public wandb API timed out (timeout=19 sec). Create a new API with an integer timeout larger than 19, e.g., `api = wandb.Api(timeout=29)` to increase the graphql timeout.
+🏆 New best model logged!
+wandb: 
+wandb: Run history:
+wandb:      batch_loss █▆▅▃▂▃▄▂▃▂▃▂▂▂▂▂▁▁▂▃▂▂▂▂▂▁▂▁▂▂▂▁▂▁▂▁▂▁▁▁
+wandb:           epoch ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▅▅▅▅▅▅▅▅▅▅▅▅▅▅████████████
+wandb:   test_accuracy ▁
+wandb:         test_f1 ▁
+wandb:  test_precision ▁
+wandb:     test_recall ▁
+wandb:  train_accuracy ▁▆█
+wandb:        train_f1 ▁▆█
+wandb: train_precision ▁▆█
+wandb:    train_recall ▁▆█
+wandb:              +4 ...
+wandb:
+wandb: Run summary:
+wandb:        batch_loss 0.05852
+wandb: best_val_accuracy 0.97565
+wandb:             epoch 2
+wandb:     test_accuracy 0.9759
+wandb:           test_f1 0.9759
+wandb:    test_precision 0.97603
+wandb:       test_recall 0.9759
+wandb:    train_accuracy 0.97453
+wandb:          train_f1 0.97456
+wandb:   train_precision 0.9747
+wandb:                +5 ...
+wandb:
+wandb:  View run serene-sweep-3 at: https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-sweeps/runs/jkcp7gr5
+wandb:  View project at: https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-sweeps
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: .\wandb\run-20251231_231204-jkcp7gr5\logs
+wandb: Agent Starting Run: icbvqx4a with config:
+wandb:  architecture: CNN
+wandb:  batch_size: 256
+wandb:  classes: 10
+wandb:  dataset: MNIST
+wandb:  db_path: data/mnist.db
+wandb:  epochs: 3
+wandb:  kernels: [16, 64]
+wandb:  learning_rate: 0.007237101804037103
+wandb:  model_path: model/mnist.onnx
+wandb: WARNING Ignoring project 'pytorch-sqlite-sweeps' when running a sweep.
+wandb: Tracking run with wandb version 0.23.1
+wandb: Run data is saved locally in C:\Users\HP\Documents\repos\mlops-weights-&-biases\wandb\run-20251231_231657-icbvqx4a
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run dulcet-sweep-4
+wandb:  View project at https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-sweeps
+wandb:  View sweep at https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-sweeps/sweeps/u4ucth27
+wandb:  View run at https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-sweeps/runs/icbvqx4a
+{'architecture': 'CNN', 'batch_size': 256, 'classes': 10, 'dataset': 'MNIST', 'db_path': 'data/mnist.db', 'epochs': 3, 'kernels': [16, 64], 'learning_rate': 0.007237101804037103, 'model_path': 'model/mnist.onnx'}
+  0%|                                                                                                                                                      | 0/3 [00:00<?, ?it/s]Epoch 0 | Train Acc: 98.41% | Val Acc: 98.13%
+ 33%|███████████████████████████████████████████████▎                                                                                              | 1/3 [01:27<02:55, 87.98s/it]Epoch 1 | Train Acc: 98.94% | Val Acc: 98.57%
+ 67%|██████████████████████████████████████████████████████████████████████████████████████████████▋                                               | 2/3 [03:06<01:34, 94.40s/it]Epoch 2 | Train Acc: 99.25% | Val Acc: 98.79%
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [04:46<00:00, 95.37s/it]
+🧪 Running final evaluation...
+Final Test Metrics: {'test_accuracy': 0.9899, 'test_precision': 0.989924499764099, 'test_recall': 0.9899, 'test_f1': 0.9898976642564595}
+[torch.onnx] Obtain model graph for `ConvNet([...]` with `torch.export.export(..., strict=False)`...
+[torch.onnx] Obtain model graph for `ConvNet([...]` with `torch.export.export(..., strict=False)`... ✅
+[torch.onnx] Run decomposition...
+[torch.onnx] Run decomposition... ✅
+[torch.onnx] Translate the graph into ONNX...
+[torch.onnx] Translate the graph into ONNX... ✅
+wandb: WARNING A graphql request initiated by the public wandb API timed out (timeout=19 sec). Create a new API with an integer timeout larger than 19, e.g., `api = wandb.Api(timeout=29)` to increase the graphql timeout.
+🏆 New best model logged!
+wandb:
+wandb: Run history:
+wandb:      batch_loss █▃▃▃▃▂▂▂▂▁▁▁▂▁▂▂▁▁▁▁▁▁▁
+wandb:           epoch ▁▁▁▁▁▁▁▁▅▅▅▅▅▅▅▅▅█████████
+wandb:   test_accuracy ▁
+wandb:         test_f1 ▁
+wandb:  test_precision ▁
+wandb:     test_recall ▁
+wandb:  train_accuracy ▁▅█
+wandb:        train_f1 ▁▅█
+wandb: train_precision ▁▅█
+wandb:    train_recall ▁▅█
+wandb:              +4 ...
+wandb:
+wandb: Run summary:
+wandb:        batch_loss 0.02773
+wandb: best_val_accuracy 0.98792
+wandb:             epoch 2
+wandb:     test_accuracy 0.9899
+wandb:           test_f1 0.9899
+wandb:    test_precision 0.98992
+wandb:       test_recall 0.9899
+wandb:    train_accuracy 0.99252
+wandb:          train_f1 0.99252
+wandb:   train_precision 0.99255
+wandb:                +5 ...
+wandb:
+wandb:  View run dulcet-sweep-4 at: https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-sweeps/runs/icbvqx4a
+wandb:  View project at: https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-sweeps
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: .\wandb\run-20251231_231657-icbvqx4a\logs
+wandb: Agent Starting Run: 5f9n49sa with config:
+wandb:  architecture: CNN
+wandb:  batch_size: 64
+wandb:  classes: 10
+wandb:  dataset: MNIST
+wandb:  db_path: data/mnist.db
+wandb:  epochs: 3
+wandb:  kernels: [32, 64]
+wandb:  learning_rate: 0.0055872729222783395
+wandb:  model_path: model/mnist.onnx
+wandb: WARNING Ignoring project 'pytorch-sqlite-sweeps' when running a sweep.
+wandb: Tracking run with wandb version 0.23.1
+wandb: Run data is saved locally in C:\Users\HP\Documents\repos\mlops-weights-&-biases\wandb\run-20251231_232227-5f9n49sa
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run fragrant-sweep-5
+wandb:  View project at https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-sweeps
+wandb:  View sweep at https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-sweeps/sweeps/u4ucth27
+wandb:  View run at https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-sweeps/runs/5f9n49sa
+{'architecture': 'CNN', 'batch_size': 64, 'classes': 10, 'dataset': 'MNIST', 'db_path': 'data/mnist.db', 'epochs': 3, 'kernels': [32, 64], 'learning_rate': 0.0055872729222783395, 'model_path': 'model/mnist.onnx'}
+  0%|                                                                                                                                                      | 0/3 [00:00<?, ?it/s]Epoch 0 | Train Acc: 98.56% | Val Acc: 98.38%
+ 33%|███████████████████████████████████████████████                                                                                              | 1/3 [01:54<03:49, 114.78s/it]Epoch 1 | Train Acc: 99.00% | Val Acc: 98.73%
+ 67%|██████████████████████████████████████████████████████████████████████████████████████████████                                               | 2/3 [03:50<01:55, 115.15s/it]Epoch 2 | Train Acc: 99.26% | Val Acc: 98.92%
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [05:55<00:00, 118.62s/it]
+🧪 Running final evaluation...
+Final Test Metrics: {'test_accuracy': 0.9878, 'test_precision': 0.9878458121126464, 'test_recall': 0.9878, 'test_f1': 0.9877888376847502}
+[torch.onnx] Obtain model graph for `ConvNet([...]` with `torch.export.export(..., strict=False)`...
+[torch.onnx] Obtain model graph for `ConvNet([...]` with `torch.export.export(..., strict=False)`... ✅
+[torch.onnx] Run decomposition...
+[torch.onnx] Run decomposition... ✅
+[torch.onnx] Translate the graph into ONNX...
+[torch.onnx] Translate the graph into ONNX... ✅
+wandb: WARNING A graphql request initiated by the public wandb API timed out (timeout=19 sec). Create a new API with an integer timeout larger than 19, e.g., `api = wandb.Api(timeout=29)` to increase the graphql timeout.
+🏆 New best model logged!
+wandb: 
+wandb: Run history:
+wandb:      batch_loss █▃▃▂▂▂▁▂▃▂▂▁▁▃▄▁▁▂▃▂▄▁▁▁▁▄▁▂▁▂▁▂▁▃▁▁▁▃▂▅
+wandb:           epoch ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▅▅▅▅▅▅▅▅▅▅▅▅▅████████████
+wandb:   test_accuracy ▁
+wandb:         test_f1 ▁
+wandb:  test_precision ▁
+wandb:     test_recall ▁
+wandb:  train_accuracy ▁▅█
+wandb:        train_f1 ▁▅█
+wandb: train_precision ▁▅█
+wandb:    train_recall ▁▅█
+wandb:              +4 ...
+wandb:
+wandb: Run summary:
+wandb:        batch_loss 0.287
+wandb: best_val_accuracy 0.98922
+wandb:             epoch 2
+wandb:     test_accuracy 0.9878
+wandb:           test_f1 0.98779
+wandb:    test_precision 0.98785
+wandb:       test_recall 0.9878
+wandb:    train_accuracy 0.99258
+wandb:          train_f1 0.99258
+wandb:   train_precision 0.99258
+wandb:                +5 ...
+wandb:
+wandb:  View run fragrant-sweep-5 at: https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-sweeps/runs/5f9n49sa
+wandb:  View project at: https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-sweeps
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: .\wandb\run-20251231_232227-5f9n49sa\logs

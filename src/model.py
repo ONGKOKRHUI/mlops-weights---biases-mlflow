@@ -10,7 +10,7 @@ class ConvNet(nn.Module):
             nn.MaxPool2d(kernel_size=2, stride=2)
         )
         self.layer2 = nn.Sequential(
-            nn.Conv2d(16, kernels[1], kernel_size=5, stride=1, padding=2),
+            nn.Conv2d(kernels[0], kernels[1], kernel_size=5, stride=1, padding=2),
             nn.ReLU(),
             nn.MaxPool2d(kernel_size=2, stride=2)
         )

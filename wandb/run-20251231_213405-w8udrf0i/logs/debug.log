@@ -1,0 +1,28 @@
+2025-12-31 21:34:05,384 INFO    Thread-28 (_run_job):9972 [wandb_setup.py:_flush():80] Current SDK version is 0.23.1
+2025-12-31 21:34:05,384 INFO    Thread-28 (_run_job):9972 [wandb_setup.py:_flush():80] Configure stats pid to 9972
+2025-12-31 21:34:05,384 INFO    Thread-28 (_run_job):9972 [wandb_setup.py:_flush():80] Loading settings from C:\Users\HP\.config\wandb\settings
+2025-12-31 21:34:05,384 INFO    Thread-28 (_run_job):9972 [wandb_setup.py:_flush():80] Loading settings from C:\Users\HP\Documents\repos\mlops-weights-&-biases\wandb\settings
+2025-12-31 21:34:05,384 INFO    Thread-28 (_run_job):9972 [wandb_setup.py:_flush():80] Loading settings from environment variables
+2025-12-31 21:34:05,384 INFO    Thread-28 (_run_job):9972 [wandb_init.py:setup_run_log_directory():714] Logging user logs to C:\Users\HP\Documents\repos\mlops-weights-&-biases\wandb\run-20251231_213405-w8udrf0i\logs\debug.log
+2025-12-31 21:34:05,412 INFO    Thread-28 (_run_job):9972 [wandb_init.py:setup_run_log_directory():715] Logging internal logs to C:\Users\HP\Documents\repos\mlops-weights-&-biases\wandb\run-20251231_213405-w8udrf0i\logs\debug-internal.log
+2025-12-31 21:34:05,413 INFO    Thread-28 (_run_job):9972 [wandb_init.py:init():841] calling init triggers
+2025-12-31 21:34:05,413 INFO    Thread-28 (_run_job):9972 [wandb_init.py:init():846] wandb.init called with sweep_config: {'architecture': 'CNN', 'batch_size': 32, 'classes': 10, 'dataset': 'MNIST', 'db_path': 'data/mnist.db', 'epochs': 3, 'kernels': [16, 64], 'learning_rate': 0.0011950972429981444}
+config: {'_wandb': {}}
+2025-12-31 21:34:05,413 INFO    Thread-28 (_run_job):9972 [wandb_init.py:init():889] starting backend
+2025-12-31 21:34:07,654 INFO    Thread-28 (_run_job):9972 [wandb_init.py:init():892] sending inform_init request
+2025-12-31 21:34:07,657 INFO    Thread-28 (_run_job):9972 [wandb_init.py:init():900] backend started and connected
+2025-12-31 21:34:07,658 INFO    Thread-28 (_run_job):9972 [wandb_run.py:_config_callback():1396] config_cb None None {'architecture': 'CNN', 'batch_size': 32, 'classes': 10, 'dataset': 'MNIST', 'db_path': 'data/mnist.db', 'epochs': 3, 'kernels': [16, 64], 'learning_rate': 0.0011950972429981444}
+2025-12-31 21:34:07,660 INFO    Thread-28 (_run_job):9972 [wandb_init.py:init():970] updated telemetry
+2025-12-31 21:34:07,724 INFO    Thread-28 (_run_job):9972 [wandb_init.py:init():994] communicating run to backend with 90.0 second timeout
+2025-12-31 21:34:09,138 INFO    Thread-28 (_run_job):9972 [wandb_init.py:init():1041] starting run threads in backend
+2025-12-31 21:34:09,303 INFO    Thread-28 (_run_job):9972 [wandb_run.py:_console_start():2521] atexit reg
+2025-12-31 21:34:09,303 INFO    Thread-28 (_run_job):9972 [wandb_run.py:_redirect():2369] redirect: wrap_raw
+2025-12-31 21:34:09,304 INFO    Thread-28 (_run_job):9972 [wandb_run.py:_redirect():2438] Wrapping output streams.
+2025-12-31 21:34:09,304 INFO    Thread-28 (_run_job):9972 [wandb_run.py:_redirect():2461] Redirects installed.
+2025-12-31 21:34:09,305 INFO    Thread-28 (_run_job):9972 [wandb_init.py:init():1081] run started, returning control to user process
+2025-12-31 21:34:11,504 INFO    Thread-28 (_run_job):9972 [wandb_watch.py:_watch():68] Watching
+2025-12-31 21:38:00,666 INFO    Thread-28 (_run_job):9972 [wandb_run.py:_finish():2287] finishing run kokrhui-ong-tng-digital/pytorch-sqlite-sweeps/w8udrf0i
+2025-12-31 21:38:00,667 INFO    Thread-28 (_run_job):9972 [wandb_run.py:_atexit_cleanup():2486] got exitcode: 1
+2025-12-31 21:38:00,667 INFO    Thread-28 (_run_job):9972 [wandb_run.py:_restore():2468] restore
+2025-12-31 21:38:00,667 INFO    Thread-28 (_run_job):9972 [wandb_run.py:_restore():2474] restore done
+2025-12-31 21:38:02,243 INFO    Thread-28 (_run_job):9972 [wandb_run.py:_footer_sync_info():3862] logging synced files

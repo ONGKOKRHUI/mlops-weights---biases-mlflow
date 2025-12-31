@@ -14,13 +14,14 @@ sweep_config = {
         'dataset': {'value': "MNIST"},
         'architecture': {'value': "CNN"},
         'db_path': {'value': "data/mnist.db"},
+        'model_path': {'value': "model/mnist.onnx"},
         
         # Parameters to tune
         'learning_rate': {
             'min': 0.0001,
             'max': 0.01
         },
-        'batch_size': {
+        'batch_size': { 
             'values': [32, 64, 128, 256]
         },
         'kernels': {
@@ -39,9 +40,12 @@ def sweep_train():
 
 if __name__ == "__main__":
     # 2. Initialize the Sweep
+    
     sweep_id = wandb.sweep(sweep_config, project="pytorch-sqlite-sweeps")
     
     print(f"🚀 Starting sweep with ID: {sweep_id}")
     
     # 3. Run the Agent (Executes the training loop 5 times)
+    #samples new HP from sweep_config for each run
+    #calls wandb.init and injects sampled values into wandb.config
     wandb.agent(sweep_id, function=sweep_train, count=5)
