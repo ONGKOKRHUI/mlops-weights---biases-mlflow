@@ -6,3 +6,4 @@ onnx
 tqdm
 oonxscript
 numpy
+scikit-learn

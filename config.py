@@ -7,5 +7,6 @@ PARAMS = {
     "learning_rate": 0.005,
     "dataset": "MNIST",
     "architecture": "CNN",
-    "db_path": "data/mnist.db"  # Path to the SQLite database
+    "db_path": "data/mnist.db",  # Path to the SQLite database
+    "model_path": "model/mnist.onnx"
 }
