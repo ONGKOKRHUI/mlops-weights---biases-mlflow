@@ -1,6 +1,6 @@
 # Hyperparameter configuration
 PARAMS = {
-    "epochs": 5,
+    "epochs": 1,
     "classes": 10,
     "kernels": [16, 32], 
     "batch_size": 128,

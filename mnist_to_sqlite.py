@@ -1,3 +1,7 @@
+"""
+Converts MNIST dataset to sqlite database
+"""
+
 import sqlite3
 import io
 import numpy as np

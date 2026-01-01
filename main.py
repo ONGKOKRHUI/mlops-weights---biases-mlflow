@@ -1,3 +1,8 @@
+"""
+define model pipeline function
+
+"""
+
 import wandb
 import torch
 import torch.nn as nn
@@ -49,15 +54,19 @@ def model_pipeline(hyperparameters=None):
     # wandb.run is None if not doing a HP sweep
     if wandb.run is None:
         # not doing HP sweep, so use default hyperparameters
-        wandb.init(project="pytorch-sqlite-ops", config=hyperparameters)
-    config = wandb.config
-    print(dict(wandb.config))
+        run = wandb.init(project="pytorch-sqlite-ops", job_type = "training", config=hyperparameters)
     
-    # Log Data Artifact
-    if os.path.exists(config.db_path):
-        data_artifact = wandb.Artifact(name="mnist-sqlite-data", type="dataset")
-        data_artifact.add_file(config.db_path)
-        wandb.log_artifact(data_artifact)
+    # This tells W&B: "This specific run depends on mnist-sqlite-data:latest"
+    artifact = run.use_artifact("mnist-sqlite-data:latest")
+
+    # This ensures you are using the exact file version tracked by W&B
+    artifact_dir = artifact.download()
+    
+    config = wandb.config
+    config.db_path = os.path.join(artifact_dir, "mnist.db")
+    print(dict(wandb.config))
+    print(f"🔗 Run linked to artifact! Using file at: {config.db_path}")
+    
 
     # Get all 3 loaders
     model, train_loader, val_loader, test_loader, criterion, optimizer = make(config, device)
@@ -71,4 +80,8 @@ def model_pipeline(hyperparameters=None):
     return model
 
 if __name__ == "__main__":
+    import os
+    os.environ['WANDB_INIT_TIMEOUT'] = '600'  # timeout in seconds
+
     model_pipeline(PARAMS)
+    wandb.finish()

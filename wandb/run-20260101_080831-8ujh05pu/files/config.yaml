@@ -1,0 +1,78 @@
+_wandb:
+    value:
+        cli_version: 0.23.1
+        e:
+            o6q3m0a01mkpofdprz10sotfmrem6y6j:
+                codePath: main.py
+                codePathLocal: main.py
+                cpu_count: 6
+                cpu_count_logical: 12
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "510989955072"
+                        used: "261011050496"
+                email: kokrhui.ong@gmail.com
+                executable: C:\Users\HP\Documents\repos\mlops-weights-&-biases\venv\Scripts\python.exe
+                git:
+                    commit: 8e3dc417f1bea8fe412aee1ec2eddb2634158ee8
+                    remote: https://github.com/ONGKOKRHUI/mlops-weights---biases-mlflow.git
+                gpu: NVIDIA GeForce RTX 4050 Laptop GPU
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 2560
+                      memoryTotal: "6439305216"
+                      name: NVIDIA GeForce RTX 4050 Laptop GPU
+                      uuid: GPU-c572972b-5d64-d032-47e1-06a715da7990
+                host: LAPTOP-1TMQC35K
+                memory:
+                    total: "16390750208"
+                os: Windows-11-10.0.26200-SP0
+                program: C:\Users\HP\Documents\repos\mlops-weights-&-biases\main.py
+                python: CPython 3.13.9
+                root: C:\Users\HP\Documents\repos\mlops-weights-&-biases
+                startedAt: "2026-01-01T00:08:31.703046Z"
+                writerId: o6q3m0a01mkpofdprz10sotfmrem6y6j
+        m: []
+        python_version: 3.13.9
+        t:
+            "1":
+                - 1
+                - 5
+                - 53
+            "2":
+                - 1
+                - 5
+                - 53
+            "3":
+                - 1
+                - 16
+                - 61
+                - 62
+            "4": 3.13.9
+            "5": 0.23.1
+            "8":
+                - 3
+            "12": 0.23.1
+            "13": windows-amd64
+architecture:
+    value: CNN
+batch_size:
+    value: 128
+classes:
+    value: 10
+dataset:
+    value: MNIST
+db_path:
+    value: data/mnist.db
+epochs:
+    value: 5
+kernels:
+    value:
+        - 16
+        - 32
+learning_rate:
+    value: 0.005
+model_path:
+    value: model/mnist.onnx

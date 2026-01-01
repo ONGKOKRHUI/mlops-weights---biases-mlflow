@@ -1,0 +1,3 @@
+- run python mnist_to_sqlite.py for data preprocessing
+- run python main.py for training
+- run python sweep.py for hyprerparameter tuning
