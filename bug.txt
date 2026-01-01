@@ -1,0 +1,9 @@
+Bug Report 1
+Problem: unable to log model as artifact, it shows running and uploading and succeed but did not see in the wandb UI
+Recreate: run python main_2.py
+What I tried:
+- using artifact.wait() to prevent session killed when uploading (failed)
+- using os.environ["WANDB_HTTP_TIMEOUT"] = "300" (failed)
+- using pytorch method to only store weights (failed)
+- isolate model logging using a mock model (succedded)
+- demodularise the testing code to enable avoid modularisaion session confusion (failed)

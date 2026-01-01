@@ -1,0 +1,37 @@
+2026-01-01 12:49:11,164 INFO    MainThread:20080 [wandb_setup.py:_flush():80] Current SDK version is 0.23.1
+2026-01-01 12:49:11,164 INFO    MainThread:20080 [wandb_setup.py:_flush():80] Configure stats pid to 20080
+2026-01-01 12:49:11,164 INFO    MainThread:20080 [wandb_setup.py:_flush():80] Loading settings from C:\Users\HP\.config\wandb\settings
+2026-01-01 12:49:11,164 INFO    MainThread:20080 [wandb_setup.py:_flush():80] Loading settings from C:\Users\HP\Documents\repos\mlops-weights-&-biases\wandb\settings
+2026-01-01 12:49:11,164 INFO    MainThread:20080 [wandb_setup.py:_flush():80] Loading settings from environment variables
+2026-01-01 12:49:11,164 INFO    MainThread:20080 [wandb_init.py:setup_run_log_directory():714] Logging user logs to C:\Users\HP\Documents\repos\mlops-weights-&-biases\wandb\run-20260101_124911-5k3j00m3\logs\debug.log
+2026-01-01 12:49:11,164 INFO    MainThread:20080 [wandb_init.py:setup_run_log_directory():715] Logging internal logs to C:\Users\HP\Documents\repos\mlops-weights-&-biases\wandb\run-20260101_124911-5k3j00m3\logs\debug-internal.log
+2026-01-01 12:49:11,164 INFO    MainThread:20080 [wandb_init.py:init():841] calling init triggers
+2026-01-01 12:49:11,164 INFO    MainThread:20080 [wandb_init.py:init():846] wandb.init called with sweep_config: {}
+config: {'epochs': 1, 'batch_size': 128, 'learning_rate': 0.005, 'classes': 10, 'kernels': [16, 32], 'architecture': 'CNN', 'dataset_artifact': 'mnist-sqlite-data:latest', 'dataset': 'MNIST', 'model_path': 'model/mnist.onnx', '_wandb': {}}
+2026-01-01 12:49:11,164 INFO    MainThread:20080 [wandb_init.py:init():889] starting backend
+2026-01-01 12:49:13,448 INFO    MainThread:20080 [wandb_init.py:init():892] sending inform_init request
+2026-01-01 12:49:13,489 INFO    MainThread:20080 [wandb_init.py:init():900] backend started and connected
+2026-01-01 12:49:13,509 INFO    MainThread:20080 [wandb_init.py:init():970] updated telemetry
+2026-01-01 12:49:13,547 INFO    MainThread:20080 [wandb_init.py:init():994] communicating run to backend with 90.0 second timeout
+2026-01-01 12:49:15,965 INFO    MainThread:20080 [wandb_init.py:init():1041] starting run threads in backend
+2026-01-01 12:49:16,101 INFO    MainThread:20080 [wandb_run.py:_console_start():2521] atexit reg
+2026-01-01 12:49:16,101 INFO    MainThread:20080 [wandb_run.py:_redirect():2369] redirect: wrap_raw
+2026-01-01 12:49:16,101 INFO    MainThread:20080 [wandb_run.py:_redirect():2438] Wrapping output streams.
+2026-01-01 12:49:16,101 INFO    MainThread:20080 [wandb_run.py:_redirect():2461] Redirects installed.
+2026-01-01 12:49:16,105 INFO    MainThread:20080 [wandb_init.py:init():1081] run started, returning control to user process
+2026-01-01 12:49:21,927 INFO    MainThread:20080 [wandb_watch.py:_watch():68] Watching
+2026-01-01 12:50:21,512 INFO    wandb-AsyncioManager-main:20080 [service_client.py:_forward_responses():80] Reached EOF.
+2026-01-01 12:50:21,512 INFO    wandb-AsyncioManager-main:20080 [mailbox.py:close():137] Closing mailbox, abandoning 1 handles.
+2026-01-01 12:50:23,578 ERROR   wandb-AsyncioManager-main:20080 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\venv\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\venv\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\venv\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\asyncio\streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost

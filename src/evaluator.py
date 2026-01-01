@@ -70,7 +70,9 @@ def test_model(model, test_loader, config, device, run): # <--- Add 'run' argume
         input_names=["input"],
         output_names=["output"],
     )
-
+    
+    assert os.path.exists(onnx_path), f"File not found: {onnx_path}"
+    
     # -------------------------
     # Candidate model artifact
     # -------------------------
@@ -91,7 +93,6 @@ def test_model(model, test_loader, config, device, run): # <--- Add 'run' argume
     
     # CRITICAL FIX: Use run.log_artifact instead of wandb.log_artifact
     run.log_artifact(candidate_artifact)
-    
     print("✅ Candidate model logged")
 
     # -------------------------
@@ -119,6 +120,8 @@ def test_model(model, test_loader, config, device, run): # <--- Add 'run' argume
 
             print("🏆 Logging new best model (run-level)...")
             run.log_artifact(best_artifact)
+            print("✅ New best model logged")
 
         else:
             print("ℹ️ Model not better than current run best")
+    

@@ -17,6 +17,8 @@ from src.model import ConvNet
 from src.trainer import train_model
 from src.evaluator import test_model
 
+os.environ["WANDB_HTTP_TIMEOUT"] = "300" 
+
 def make(db_path, config, device):
     # 1. Load the Full Training Data (60,000 images)
     full_train_dataset = MNISTDatabaseDataset(db_path, split='train')
@@ -54,7 +56,10 @@ def model_pipeline(hyperparameters=None):
     # wandb.run is None if not doing a HP sweep
     if wandb.run is None:
         # not doing HP sweep, so use default hyperparameters
-        run = wandb.init(project="pytorch-sqlite-ops", job_type = "training", config=hyperparameters)
+        run = wandb.init(project="pytorch-sqlite-ops", 
+                         job_type = "training", 
+                         config=hyperparameters,
+                         name="training")
     
     config = run.config
 
@@ -77,11 +82,7 @@ def model_pipeline(hyperparameters=None):
     
     # Evaluate on the unseen Test Set only at the very end
     test_model(model, test_loader, config, device, run)
-
-    print("Waiting for W&B to finish...")
     run.finish()
-    print("🎉 Done!")
-
     return model
 
 if __name__ == "__main__":
