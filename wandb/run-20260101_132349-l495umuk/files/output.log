@@ -1,0 +1,22 @@
+[34m[1mwandb[0m: Downloading large artifact 'mnist-sqlite-data:latest', 69.69MB. 1 files...
+[34m[1mwandb[0m:   1 of 1 files downloaded.
+Done. 00:00:00.3 (213.1MB/s)
+🔗 Run linked to dataset artifact
+📦 Artifact: mnist-sqlite-data:latest
+📁 DB path: C:\Users\HP\Documents\repos\mlops-weights-&-biases\artifacts\mnist-sqlite-data-v0\mnist.db
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:54<00:00, 54.26s/it]
+Epoch 0 | Train Acc: 98.42% | Val Acc: 98.31%
+🧪 Running final evaluation...
+Final Test Metrics: {'test_accuracy': 0.9843, 'test_precision': 0.9844763097463963, 'test_recall': 0.9843, 'test_f1': 0.9842932040374257}
+✅ Mock model saved at model/mock_mnist_model.pt
+📦 Uploading candidate model artifact...
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\main_2.py", line 220, in <module>
+    model_pipeline(PARAMS)
+    ~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\main_2.py", line 186, in model_pipeline
+    logged_artifact.wait()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\venv\Lib\site-packages\wandb\sdk\artifacts\artifact.py", line 1243, in wait
+    raise ValueError(response.error_message)
+ValueError: ArtifactSaver.createArtifact: returned error 400: {"data":{"createArtifact":null},"errors":[{"message":"Invalid Client ID digest","path":["createArtifact"]}]}

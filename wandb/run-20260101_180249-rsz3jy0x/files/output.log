@@ -1,0 +1,12 @@
+✅ Found model file at model/mock_mnist_model.pt
+⏳ Uploading model to W&B... this may take a minute...
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\main_2.py", line 143, in <module>
+    model_pipeline(PARAMS)
+    ~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\main_2.py", line 131, in model_pipeline
+    artifact.wait() # Forces script to pause until upload is 100% done
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\venv\Lib\site-packages\wandb\sdk\artifacts\artifact.py", line 1243, in wait
+    raise ValueError(response.error_message)
+ValueError: ArtifactSaver.createArtifact: returned error 400: {"data":{"createArtifact":null},"errors":[{"message":"Invalid Client ID digest","path":["createArtifact"]}]}

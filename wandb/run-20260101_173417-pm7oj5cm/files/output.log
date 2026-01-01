@@ -1,0 +1,3 @@
+✅ Found file at data/mnist.db
+⏳ Uploading to W&B... this may take a minute...
+🎉 Upload Success! Check the 'dataset' tab in W&B now.

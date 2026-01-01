@@ -1,0 +1,39 @@
+_wandb:
+    value:
+        cli_version: 0.23.1
+        m: []
+        python_version: 3.13.9
+        t:
+            "1":
+                - 1
+                - 5
+                - 53
+            "3":
+                - 13
+                - 16
+            "4": 3.13.9
+            "5": 0.23.1
+            "8":
+                - 3
+            "12": 0.23.1
+            "13": windows-amd64
+architecture:
+    value: CNN
+batch_size:
+    value: 128
+classes:
+    value: 10
+dataset:
+    value: MNIST
+dataset_artifact:
+    value: mnist-sqlite-data:latest
+epochs:
+    value: 1
+kernels:
+    value:
+        - 16
+        - 32
+learning_rate:
+    value: 0.005
+model_path:
+    value: model/mnist.onnx
