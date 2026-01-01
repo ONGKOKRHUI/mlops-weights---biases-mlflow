@@ -1,0 +1,12 @@
+{"time":"2026-01-01T18:44:18.731689+08:00","level":"INFO","msg":"stream: starting","core version":"0.23.1"}
+{"time":"2026-01-01T18:44:19.7255121+08:00","level":"INFO","msg":"stream: created new stream","id":"dmliek13"}
+{"time":"2026-01-01T18:44:19.7260657+08:00","level":"INFO","msg":"handler: started","stream_id":"dmliek13"}
+{"time":"2026-01-01T18:44:19.7281871+08:00","level":"INFO","msg":"stream: started","id":"dmliek13"}
+{"time":"2026-01-01T18:44:19.7281871+08:00","level":"INFO","msg":"sender: started","stream_id":"dmliek13"}
+{"time":"2026-01-01T18:44:19.7281871+08:00","level":"INFO","msg":"writer: started","stream_id":"dmliek13"}
+{"time":"2026-01-01T18:44:21.3590652+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-01-01T18:44:21.6573728+08:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-01-01T18:44:21.6622474+08:00","level":"INFO","msg":"stream: closing","id":"dmliek13"}
+{"time":"2026-01-01T18:44:21.6622474+08:00","level":"INFO","msg":"handler: closed","stream_id":"dmliek13"}
+{"time":"2026-01-01T18:44:21.6660263+08:00","level":"INFO","msg":"sender: closed","stream_id":"dmliek13"}
+{"time":"2026-01-01T18:44:21.6660263+08:00","level":"INFO","msg":"stream: closed","id":"dmliek13"}

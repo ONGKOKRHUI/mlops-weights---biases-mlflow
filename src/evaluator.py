@@ -45,11 +45,20 @@ def test_model(model, test_loader, config, device, run): # <--- Add 'run' argume
     # Use the passed 'run' object for logging
     run.log(metrics) 
 
-    # Promote metrics to summary
+    # Promote metrics to summary -> scalar values of metrics
     for k, v in metrics.items():
         run.summary[k] = v
 
     print(f"Final Test Metrics: {metrics}")
+
+    #-------------------------
+    # include val metrics in the summary for best model choosing
+    #-------------------------
+    val_metrics = evaluate(model, test_loader, device, split="val")
+    for k, v in val_metrics.items():
+        run.summary[k] = v
+    
+    print(f"Final Val Metrics: {val_metrics}")
 
     # -------------------------
     # Export ONNX
@@ -73,17 +82,25 @@ def test_model(model, test_loader, config, device, run): # <--- Add 'run' argume
     
     assert os.path.exists(onnx_path), f"File not found: {onnx_path}"
     
+    #------------------------------
+    #Build artifact metadata
+    #-------------------------------
+
+    artifact_metadata = {
+    "run_id": run.id,
+    "architecture": config.architecture,
+    }
+
+    # Add test metrics
+    artifact_metadata.update(metrics)
+
     # -------------------------
     # Candidate model artifact
     # -------------------------
     candidate_artifact = wandb.Artifact(
         name="mnist-cnn-candidate",
         type="model",
-        metadata={
-            "run_id": run.id,
-            "test_accuracy": metrics["test_accuracy"],
-            "architecture": config.architecture,
-        },
+        metadata=artifact_metadata,
     )
 
     # Fix: Use abspath to ensure Windows doesn't get confused
@@ -96,10 +113,13 @@ def test_model(model, test_loader, config, device, run): # <--- Add 'run' argume
     print("✅ Candidate model logged")
 
     # -------------------------
-    # Best model promotion
+    # Best model promotion (by validation accuracy)
     # -------------------------
     current_val = run.summary.get("val_accuracy")
-    if current_val is not None:
+
+    if current_val is None:
+        print("⚠️ val_accuracy not found in run.summary — skipping best model check")
+    else:
         best_val = run.summary.get("best_val_accuracy", 0.0)
 
         if current_val > best_val:
@@ -108,20 +128,20 @@ def test_model(model, test_loader, config, device, run): # <--- Add 'run' argume
             best_artifact = wandb.Artifact(
                 name="mnist-cnn-best",
                 type="model",
-                description="Best model within this run",
+                description="Best model selected by validation accuracy",
                 metadata={
-                    "val_accuracy": current_val,
-                    "test_accuracy": metrics["test_accuracy"],
+                    **artifact_metadata,
+                    "selection_metric": "val_accuracy",
+                    "best_val_accuracy": current_val,
                 },
             )
 
-            # Link the SAME file path
+            # Link the SAME ONNX file
             best_artifact.add_file(os.path.abspath(onnx_path))
 
-            print("🏆 Logging new best model (run-level)...")
-            run.log_artifact(best_artifact)
+            print("🏆 Logging new best model (selected by val_accuracy)...")
+            run.log_artifact(best_artifact, aliases=["best"])
             print("✅ New best model logged")
 
         else:
-            print("ℹ️ Model not better than current run best")
-    
+            print("ℹ️ Model did not improve on best validation accuracy")

@@ -8,7 +8,7 @@ os.environ["WANDB_HTTP_TIMEOUT"] = "300"
 def upload():
     # Initialize a run JUST for data upload
     run = wandb.init(
-        project="pytorch-sqlite-ops", 
+        project="pytorch-sqlite-sweeps",     #project="pytorch-sqlite-ops"
         job_type="upload_dataset",
         name="upload_mnist_data"
     )

@@ -1,0 +1,69 @@
+2026-01-01 19:08:21,792 INFO    Thread-13 (_run_job):12316 [wandb_init.py:setup_run_log_directory():714] Logging user logs to C:\Users\HP\Documents\repos\mlops-weights-&-biases\wandb\run-20260101_190821-w57crmho\logs\debug.log
+2026-01-01 19:08:21,792 INFO    Thread-13 (_run_job):12316 [wandb_init.py:setup_run_log_directory():715] Logging internal logs to C:\Users\HP\Documents\repos\mlops-weights-&-biases\wandb\run-20260101_190821-w57crmho\logs\debug-internal.log
+2026-01-01 19:08:21,792 INFO    Thread-13 (_run_job):12316 [wandb_init.py:init():841] calling init triggers
+2026-01-01 19:08:21,793 INFO    Thread-13 (_run_job):12316 [wandb_init.py:init():846] wandb.init called with sweep_config: {'architecture': 'CNN', 'batch_size': 128, 'classes': 10, 'dataset': 'MNIST', 'db_path': 'data/mnist.db', 'epochs': 3, 'kernels': [16, 64], 'learning_rate': 0.00691703231689006, 'model_path': 'model/mnist.onnx'}
+config: {'_items': {'_wandb': {'t': {'12': '0.23.1', '13': 'windows-amd64', '1': [1, 5, 53], '3': [14], '4': '3.13.9', '5': '0.23.1', '8': [3]}, 'm': [], 'cli_version': '0.23.1', 'python_version': '3.13.9'}, 'architecture': 'CNN', 'batch_size': 128, 'classes': 10, 'dataset': 'MNIST', 'db_path': 'data/mnist.db', 'epochs': 3, 'kernels': [16, 64], 'learning_rate': 0.00691703231689006, 'model_path': 'model/mnist.onnx'}, '_locked': {'architecture': 0, 'batch_size': 0, 'classes': 0, 'dataset': 0, 'db_path': 0, 'epochs': 0, 'kernels': 0, 'learning_rate': 0, 'model_path': 0}, '_users': {'sweep': 0}, '_users_inv': {0: 'sweep'}, '_users_cnt': 1, '_callback': <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x00000189D692F610>>, '_settings': Settings(allow_offline_artifacts=True, allow_val_change=False, anonymous=<object object at 0x0000018998871250>, api_key='37f78d4de1bdba5f738121f4f59edde01ed891c7', azure_account_url_to_access_key=None, base_url='https://api.wandb.ai', code_dir=None, config_paths=None, console='wrap', console_multipart=False, console_chunk_max_bytes=0, console_chunk_max_seconds=0, credentials_file='C:\\Users\\HP\\.config\\wandb\\credentials.json', disable_code=False, disable_git=False, disable_job_creation=True, docker=None, email='kokrhui.ong@gmail.com', entity='kokrhui-ong-tng-digital', organization=None, force=False, fork_from=None, git_commit='90d3bd8f81d20e48b1eeb4d373f7c3773bbda074', git_remote='origin', git_remote_url='https://github.com/ONGKOKRHUI/mlops-weights---biases-mlflow.git', git_root=None, heartbeat_seconds=30, host='LAPTOP-1TMQC35K', http_proxy=None, https_proxy=None, identity_token_file=None, ignore_globs=(), init_timeout=90.0, insecure_disable_ssl=False, job_name=None, job_source=None, label_disable=False, launch=False, launch_config_path=None, login_timeout=None, mode='online', notebook_name=None, program='C:\\Users\\HP\\Documents\\repos\\mlops-weights-&-biases\\sweep.py', program_abspath='C:\\Users\\HP\\Documents\\repos\\mlops-weights-&-biases\\sweep.py', program_relpath='sweep.py', project='pytorch-sqlite-sweeps', quiet=False, reinit='default', relogin=False, resume=None, resume_from=None, resumed=False, root_dir='C:\\Users\\HP\\Documents\\repos\\mlops-weights-&-biases', run_group=None, run_id='w57crmho', run_job_type=None, run_name='copper-sweep-2', run_notes=None, run_tags=None, sagemaker_disable=False, save_code=None, settings_system='C:\\Users\\HP\\.config\\wandb\\settings', max_end_of_run_history_metrics=10, max_end_of_run_summary_metrics=10, show_colors=None, show_emoji=None, show_errors=True, show_info=True, show_warnings=True, silent=False, start_method=None, strict=None, summary_timeout=60, summary_warnings=5, sweep_id='mjvoh9vs', sweep_param_path='C:\\Users\\HP\\Documents\\repos\\mlops-weights-&-biases\\wandb\\sweep-mjvoh9vs\\config-w57crmho.yaml', symlink=False, sync_tensorboard=None, table_raise_on_max_row_limit_exceeded=False, use_dot_wandb=None, username=None, x_cli_only_mode=False, x_disable_meta=False, x_disable_stats=False, x_disable_viewer=False, x_disable_machine_info=False, x_executable='C:\\Users\\HP\\Documents\\repos\\mlops-weights-&-biases\\venv\\Scripts\\python.exe', x_extra_http_headers=None, x_file_stream_max_bytes=None, x_file_stream_max_line_bytes=None, x_file_stream_transmit_interval=None, x_file_stream_retry_max=None, x_file_stream_retry_wait_min_seconds=None, x_file_stream_retry_wait_max_seconds=None, x_file_stream_timeout_seconds=None, x_file_transfer_retry_max=None, x_file_transfer_retry_wait_min_seconds=None, x_file_transfer_retry_wait_max_seconds=None, x_file_transfer_timeout_seconds=None, x_files_dir=None, x_flow_control_custom=None, x_flow_control_disabled=None, x_graphql_retry_max=None, x_graphql_retry_wait_min_seconds=None, x_graphql_retry_wait_max_seconds=None, x_graphql_timeout_seconds=300.0, x_internal_check_process=8.0, x_jupyter_name=None, x_jupyter_path=None, x_jupyter_root=None, x_label=None, x_live_policy_rate_limit=None, x_live_policy_wait_time=None, x_log_level=20, x_network_buffer=None, x_primary=True, x_proxies=None, x_runqueue_item_id=None, x_save_requirements=True, x_server_side_derived_summary=False, x_server_side_expand_glob_metrics=True, x_service_transport=None, x_service_wait=30.0, x_skip_transaction_log=False, x_start_time=1767265697.216104, x_stats_pid=12316, x_stats_sampling_interval=15.0, x_stats_neuron_monitor_config_path=None, x_stats_dcgm_exporter=None, x_stats_open_metrics_endpoints=None, x_stats_open_metrics_filters=None, x_stats_open_metrics_http_headers=None, x_stats_disk_paths=('/',), x_stats_cpu_count=None, x_stats_cpu_logical_count=None, x_stats_gpu_count=None, x_stats_gpu_type=None, x_stats_gpu_device_ids=None, x_stats_buffer_size=0, x_stats_coreweave_metadata_base_url='http://169.254.169.254', x_stats_coreweave_metadata_endpoint='/api/v2/cloud-init/meta-data', x_stats_track_process_tree=False, x_sync=False, x_sync_dir_suffix='', x_update_finish_state=True, colab_url=None, deployment='cloud', files_dir='C:\\Users\\HP\\Documents\\repos\\mlops-weights-&-biases\\wandb\\run-20260101_190817-w57crmho\\files', is_local=False, log_dir='C:\\Users\\HP\\Documents\\repos\\mlops-weights-&-biases\\wandb\\run-20260101_190817-w57crmho\\logs', log_internal='C:\\Users\\HP\\Documents\\repos\\mlops-weights-&-biases\\wandb\\run-20260101_190817-w57crmho\\logs\\debug-internal.log', log_symlink_internal='C:\\Users\\HP\\Documents\\repos\\mlops-weights-&-biases\\wandb\\debug-internal.log', log_symlink_user='C:\\Users\\HP\\Documents\\repos\\mlops-weights-&-biases\\wandb\\debug.log', log_user='C:\\Users\\HP\\Documents\\repos\\mlops-weights-&-biases\\wandb\\run-20260101_190817-w57crmho\\logs\\debug.log', project_url='https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-sweeps', resume_fname='C:\\Users\\HP\\Documents\\repos\\mlops-weights-&-biases\\wandb\\wandb-resume.json', run_mode='run', run_url='https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-sweeps/runs/w57crmho', settings_workspace='C:\\Users\\HP\\Documents\\repos\\mlops-weights-&-biases\\wandb\\settings', sweep_url='https://wandb.ai/kokrhui-ong-tng-digital/pytorch-sqlite-sweeps/sweeps/mjvoh9vs', sync_dir='C:\\Users\\HP\\Documents\\repos\\mlops-weights-&-biases\\wandb\\run-20260101_190817-w57crmho', sync_file='C:\\Users\\HP\\Documents\\repos\\mlops-weights-&-biases\\wandb\\run-20260101_190817-w57crmho\\run-w57crmho.wandb', sync_symlink_latest='C:\\Users\\HP\\Documents\\repos\\mlops-weights-&-biases\\wandb\\latest-run', timespec='20260101_190817', wandb_dir='C:\\Users\\HP\\Documents\\repos\\mlops-weights-&-biases\\wandb'), '_artifact_callback': <bound method Run._config_artifact_callback of <wandb.sdk.wandb_run.Run object at 0x00000189D692F610>>, '_wandb': {}}
+2026-01-01 19:08:21,797 INFO    Thread-13 (_run_job):12316 [wandb_run.py:_finish():2287] finishing run kokrhui-ong-tng-digital/pytorch-sqlite-sweeps/w57crmho
+2026-01-01 19:08:21,798 INFO    Thread-13 (_run_job):12316 [wandb_run.py:_atexit_cleanup():2486] got exitcode: 1
+2026-01-01 19:08:21,798 INFO    Thread-13 (_run_job):12316 [wandb_run.py:_restore():2468] restore
+2026-01-01 19:08:21,798 INFO    Thread-13 (_run_job):12316 [wandb_run.py:_restore():2474] restore done
+2026-01-01 19:08:23,749 INFO    Thread-13 (_run_job):12316 [wandb_run.py:_footer_sync_info():3862] logging synced files
+2026-01-01 19:08:23,753 ERROR   MainThread:12316 [pyagent.py:_run_jobs_from_queue():229] [no run ID] Run w57crmho errored:
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\venv\Lib\site-packages\wandb\sdk\wandb_config.py", line 165, in __getattr__
+    return self.__getitem__(key)
+           ~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\venv\Lib\site-packages\wandb\sdk\wandb_config.py", line 130, in __getitem__
+    return self._items[key]
+           ~~~~~~~~~~~^^^^^
+KeyError: 'dataset_artifact'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\venv\Lib\site-packages\wandb\agents\pyagent.py", line 296, in _run_job
+    self._function()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\sweep.py", line 39, in sweep_train
+    model_pipeline()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\main.py", line 72, in model_pipeline
+    artifact = run.use_artifact(config.dataset_artifact, type="dataset")
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\venv\Lib\site-packages\wandb\sdk\wandb_config.py", line 167, in __getattr__
+    raise AttributeError(
+        f"{self.__class__!r} object has no attribute {key!r}"
+    ) from ke
+AttributeError: <class 'wandb.sdk.wandb_config.Config'> object has no attribute 'dataset_artifact'
+
+2026-01-01 19:08:27,363 INFO    wandb-AsyncioManager-main:12316 [service_client.py:_forward_responses():80] Reached EOF.
+2026-01-01 19:08:27,363 INFO    wandb-AsyncioManager-main:12316 [mailbox.py:close():137] Closing mailbox, abandoning 1 handles.
+2026-01-01 19:08:34,696 ERROR   MainThread:12316 [pyagent.py:_run_jobs_from_queue():229] [no run ID] Run ml59fpdz errored:
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\venv\Lib\site-packages\wandb\sdk\wandb_config.py", line 165, in __getattr__
+    return self.__getitem__(key)
+           ~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\venv\Lib\site-packages\wandb\sdk\wandb_config.py", line 130, in __getitem__
+    return self._items[key]
+           ~~~~~~~~~~~^^^^^
+KeyError: 'dataset_artifact'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\venv\Lib\site-packages\wandb\agents\pyagent.py", line 296, in _run_job
+    self._function()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\sweep.py", line 39, in sweep_train
+    model_pipeline()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\main.py", line 72, in model_pipeline
+    artifact = run.use_artifact(config.dataset_artifact, type="dataset")
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\venv\Lib\site-packages\wandb\sdk\wandb_config.py", line 167, in __getattr__
+    raise AttributeError(
+        f"{self.__class__!r} object has no attribute {key!r}"
+    ) from ke
+AttributeError: <class 'wandb.sdk.wandb_config.Config'> object has no attribute 'dataset_artifact'
+
+2026-01-01 19:08:34,697 ERROR   MainThread:12316 [pyagent.py:_run_jobs_from_queue():238] [no run ID] Detected 3 failed runs in the first 60 seconds, killing sweep.

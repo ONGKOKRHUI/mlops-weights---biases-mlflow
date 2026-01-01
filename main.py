@@ -59,6 +59,9 @@ def model_pipeline(hyperparameters=None):
                          job_type = "training", 
                          config=hyperparameters,
                          name="training")
+    else:
+        # doing HP sweep, so use hyperparameters from sweep
+        run = wandb.run
     
     config = run.config
 

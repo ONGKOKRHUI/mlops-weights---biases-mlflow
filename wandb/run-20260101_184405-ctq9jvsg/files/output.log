@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\venv\Lib\site-packages\wandb\agents\pyagent.py", line 296, in _run_job
+    self._function()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\sweep.py", line 39, in sweep_train
+    model_pipeline()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\main.py", line 63, in model_pipeline
+    config = run.config
+             ^^^
+UnboundLocalError: cannot access local variable 'run' where it is not associated with a value

@@ -15,6 +15,7 @@ sweep_config = {
         'architecture': {'value': "CNN"},
         'db_path': {'value': "data/mnist.db"},
         'model_path': {'value': "model/mnist.onnx"},
+        "dataset_artifact": {"value":"mnist-sqlite-data:latest"},
         
         # Parameters to tune
         'learning_rate': {

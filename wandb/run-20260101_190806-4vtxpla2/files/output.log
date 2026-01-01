@@ -1,0 +1,28 @@
+[34m[1mwandb[0m: [33mWARNING[0m Ignoring project 'pytorch-sqlite-ops' when running a sweep.
+[34m[1mwandb[0m: wandb.init() called while a run is active and reinit is set to 'default', so returning the previous run.
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\venv\Lib\site-packages\wandb\sdk\wandb_config.py", line 165, in __getattr__
+    return self.__getitem__(key)
+           ~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\venv\Lib\site-packages\wandb\sdk\wandb_config.py", line 130, in __getitem__
+    return self._items[key]
+           ~~~~~~~~~~~^^^^^
+KeyError: 'dataset_artifact'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\venv\Lib\site-packages\wandb\agents\pyagent.py", line 296, in _run_job
+    self._function()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\sweep.py", line 39, in sweep_train
+    model_pipeline()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\main.py", line 72, in model_pipeline
+    artifact = run.use_artifact(config.dataset_artifact, type="dataset")
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Documents\repos\mlops-weights-&-biases\venv\Lib\site-packages\wandb\sdk\wandb_config.py", line 167, in __getattr__
+    raise AttributeError(
+        f"{self.__class__!r} object has no attribute {key!r}"
+    ) from ke
+AttributeError: <class 'wandb.sdk.wandb_config.Config'> object has no attribute 'dataset_artifact'

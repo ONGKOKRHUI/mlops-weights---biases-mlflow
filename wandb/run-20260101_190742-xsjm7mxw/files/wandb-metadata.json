@@ -1,0 +1,17 @@
+{
+  "os":  "Windows-11-10.0.26200-SP0",
+  "python":  "CPython 3.13.9",
+  "startedAt":  "2026-01-01T11:07:42.502990Z",
+  "program":  "C:\\Users\\HP\\Documents\\repos\\mlops-weights-&-biases\\sweep.py",
+  "codePath":  "sweep.py",
+  "codePathLocal":  "sweep.py",
+  "git":  {
+    "remote":  "https://github.com/ONGKOKRHUI/mlops-weights---biases-mlflow.git",
+    "commit":  "90d3bd8f81d20e48b1eeb4d373f7c3773bbda074"
+  },
+  "email":  "kokrhui.ong@gmail.com",
+  "root":  "C:\\Users\\HP\\Documents\\repos\\mlops-weights-&-biases",
+  "host":  "LAPTOP-1TMQC35K",
+  "executable":  "C:\\Users\\HP\\Documents\\repos\\mlops-weights-&-biases\\venv\\Scripts\\python.exe",
+  "writerId":  "cy8iqd9gx91b5juah1v734422n1h13dm"
+}

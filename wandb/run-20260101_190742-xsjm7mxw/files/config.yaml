@@ -1,0 +1,59 @@
+_wandb:
+    value:
+        cli_version: 0.23.1
+        e:
+            cy8iqd9gx91b5juah1v734422n1h13dm:
+                codePath: sweep.py
+                codePathLocal: sweep.py
+                email: kokrhui.ong@gmail.com
+                executable: C:\Users\HP\Documents\repos\mlops-weights-&-biases\venv\Scripts\python.exe
+                git:
+                    commit: 90d3bd8f81d20e48b1eeb4d373f7c3773bbda074
+                    remote: https://github.com/ONGKOKRHUI/mlops-weights---biases-mlflow.git
+                host: LAPTOP-1TMQC35K
+                os: Windows-11-10.0.26200-SP0
+                program: C:\Users\HP\Documents\repos\mlops-weights-&-biases\sweep.py
+                python: CPython 3.13.9
+                root: C:\Users\HP\Documents\repos\mlops-weights-&-biases
+                startedAt: "2026-01-01T11:07:42.502990Z"
+                writerId: cy8iqd9gx91b5juah1v734422n1h13dm
+        m: []
+        python_version: 3.13.9
+        t:
+            "1":
+                - 1
+                - 5
+                - 53
+            "2":
+                - 1
+                - 5
+                - 53
+            "3":
+                - 2
+                - 14
+            "4": 3.13.9
+            "5": 0.23.1
+            "8":
+                - 3
+            "12": 0.23.1
+            "13": windows-amd64
+architecture:
+    value: CNN
+batch_size:
+    value: 256
+classes:
+    value: 10
+dataset:
+    value: MNIST
+db_path:
+    value: data/mnist.db
+epochs:
+    value: 3
+kernels:
+    value:
+        - 16
+        - 32
+learning_rate:
+    value: 0.004350369913421944
+model_path:
+    value: model/mnist.onnx

@@ -1,0 +1,24 @@
+wandb_version: 1
+
+architecture:
+  value: CNN
+batch_size:
+  value: 128
+classes:
+  value: 10
+dataset:
+  value: MNIST
+dataset_artifact:
+  value: mnist-sqlite-data:latest
+db_path:
+  value: data/mnist.db
+epochs:
+  value: 3
+kernels:
+  value:
+  - 16
+  - 64
+learning_rate:
+  value: 0.007464447462004624
+model_path:
+  value: model/mnist.onnx
