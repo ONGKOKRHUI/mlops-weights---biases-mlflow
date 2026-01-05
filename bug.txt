@@ -7,3 +7,5 @@ What I tried:
 - using pytorch method to only store weights (failed)
 - isolate model logging using a mock model (succedded)
 - demodularise the testing code to enable avoid modularisaion session confusion (failed)
+
+git reset --soft origin/main

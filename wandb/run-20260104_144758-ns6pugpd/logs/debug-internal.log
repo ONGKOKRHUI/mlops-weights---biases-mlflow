@@ -1,0 +1,15 @@
+{"time":"2026-01-04T14:48:01.3665385+08:00","level":"INFO","msg":"stream: starting","core version":"0.23.1"}
+{"time":"2026-01-04T14:48:03.4800175+08:00","level":"INFO","msg":"stream: created new stream","id":"ns6pugpd"}
+{"time":"2026-01-04T14:48:03.4800175+08:00","level":"INFO","msg":"handler: started","stream_id":"ns6pugpd"}
+{"time":"2026-01-04T14:48:03.4816084+08:00","level":"INFO","msg":"stream: started","id":"ns6pugpd"}
+{"time":"2026-01-04T14:48:03.4816084+08:00","level":"INFO","msg":"writer: started","stream_id":"ns6pugpd"}
+{"time":"2026-01-04T14:48:03.4816084+08:00","level":"INFO","msg":"sender: started","stream_id":"ns6pugpd"}
+{"time":"2026-01-04T14:48:07.7872491+08:00","level":"WARN","msg":"sender: sendUseArtifact: job builder disabled, skipping"}
+{"time":"2026-01-04T14:49:57.3294685+08:00","level":"ERROR","msg":"HTTP error","status":400,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2026-01-04T14:49:57.3307192+08:00","level":"ERROR","msg":"sender: failed to log artifact: ArtifactSaver.createArtifact: returned error 400: {\"data\":{\"createArtifact\":null},\"errors\":[{\"message\":\"Invalid Client ID digest\",\"path\":[\"createArtifact\"]}]}","artifactID":""}
+{"time":"2026-01-04T14:50:01.6170665+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-01-04T14:50:01.9809899+08:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-01-04T14:50:01.9883887+08:00","level":"INFO","msg":"stream: closing","id":"ns6pugpd"}
+{"time":"2026-01-04T14:50:01.9883887+08:00","level":"INFO","msg":"handler: closed","stream_id":"ns6pugpd"}
+{"time":"2026-01-04T14:50:01.9883887+08:00","level":"INFO","msg":"sender: closed","stream_id":"ns6pugpd"}
+{"time":"2026-01-04T14:50:01.9888969+08:00","level":"INFO","msg":"stream: closed","id":"ns6pugpd"}

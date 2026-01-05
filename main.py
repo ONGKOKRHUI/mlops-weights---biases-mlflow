@@ -50,7 +50,7 @@ def make(db_path, config, device):
 
 def model_pipeline(hyperparameters=None):
     device = get_device()
-    set_seed()
+    #set_seed()
 
     # wandb.run is None if not doing a HP sweep
     if wandb.run is None:

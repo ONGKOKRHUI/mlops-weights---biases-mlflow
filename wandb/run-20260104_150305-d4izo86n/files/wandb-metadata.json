@@ -1,0 +1,40 @@
+{
+  "os":  "Windows-11-10.0.26200-SP0",
+  "python":  "CPython 3.13.9",
+  "startedAt":  "2026-01-04T07:03:05.306424Z",
+  "program":  "C:\\Users\\HP\\Documents\\repos\\mlops-weights-&-biases\\main.py",
+  "codePath":  "main.py",
+  "codePathLocal":  "main.py",
+  "git":  {
+    "remote":  "https://github.com/ONGKOKRHUI/mlops-weights---biases-mlflow.git",
+    "commit":  "c1b8a0283cde5ecb29d343f4dce576dc80f57235"
+  },
+  "email":  "kokrhui.ong@gmail.com",
+  "root":  "C:\\Users\\HP\\Documents\\repos\\mlops-weights-&-biases",
+  "host":  "LAPTOP-1TMQC35K",
+  "executable":  "C:\\Users\\HP\\Documents\\repos\\mlops-weights-&-biases\\venv\\Scripts\\python.exe",
+  "cpu_count":  6,
+  "cpu_count_logical":  12,
+  "gpu":  "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "510989955072",
+      "used":  "260742762496"
+    }
+  },
+  "memory":  {
+    "total":  "16390750208"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memoryTotal":  "6439305216",
+      "cudaCores":  2560,
+      "architecture":  "Ada",
+      "uuid":  "GPU-c572972b-5d64-d032-47e1-06a715da7990"
+    }
+  ],
+  "cudaVersion":  "13.0",
+  "writerId":  "q6pw4cacq28nskcz219y140mz8ai8hg9"
+}
