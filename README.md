@@ -1,3 +1,6 @@
+- create venv and pip install -r requirements.txt
 - run python mnist_to_sqlite.py for data preprocessing
+- insert w&b api key from registered account
+- run upload_data.py to upload data as artifact to w&b server
 - run python main.py for training
 - run python sweep.py for hyprerparameter tuning
